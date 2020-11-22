@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+@import "../../../styles/baseline";
+@import "../../../styles/colors";
+@import "../../../styles/typography";
+
+.bodyText {
+  margin: 0;
+  color: $secondaryColor;
+
+  @include font-body();
+
+  &__sizeSm {
+    font-size: 4 * $typographyBaseline;
+  }
+
+  &__sizeMd {
+    font-size: 4 * $typographyBaseline;
+
+    @include md {
+      font-size: 5 * $typographyBaseline;
+    }
+  }
+
+  &__sizeLg {
+    font-size: 5 * $typographyBaseline;
+
+    @include lg {
+      font-size: 6 * $typographyBaseline;
+    }
+  }
+}

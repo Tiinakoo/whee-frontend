@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BodyText renders 1`] = `
+<BodyText>
+  <p
+    className="bodyText bodyText__sizeSm"
+  >
+    Some button
+  </p>
+</BodyText>
+`;
