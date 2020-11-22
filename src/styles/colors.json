@@ -1,0 +1,23 @@
+{
+  "primary": "#FF8882",
+  "secondary": "#543855",
+  "tertiary": "#E88D72",
+  "quaternary": "#FBB574",
+  "error": "#FF574F",
+  "success": "#BAFF82",
+  "disabled": "#e8e8e4",
+  "black": "#111111",
+  "white": "white",
+  "inherit": "inherit",
+  "transparent": "transparent",
+  "grey10": "rgba(245, 245, 245, 0.8)",
+  "grey20": "rgba(225, 225, 225, 0.8)",
+  "grey30": "rgba(205, 205, 205, 0.8)",
+  "grey40": "rgba(185, 185, 185, 0.8)",
+  "grey50": "rgba(165, 165, 165, 0.8)",
+  "grey60": "rgba(145, 145, 145, 0.8)",
+  "grey70": "rgba(125, 125, 125, 0.8)",
+  "grey80": "rgba(105, 105, 105, 0.8)",
+  "grey90": "rgba(85, 85, 85, 0.8)",
+  "grey100": "rgba(65, 65, 65, 0.8)"
+}
