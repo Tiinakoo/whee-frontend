@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Page from "./components/shared/Page/Page";
-import Navigation from "./components/shared/Navigation/Navigation";
+import Navigation from "./Navigation/Navigation";
 
 function App() {
   return (
