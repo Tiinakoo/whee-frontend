@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders 1`] = `
-<Page>
-  <div
-    className="App"
-  >
-    This will be Whee-store
-  </div>
-</Page>
+<Fragment>
+  <Navigation />
+  <Page>
+    <div
+      className="App"
+    >
+      This will be Whee-store
+    </div>
+  </Page>
+</Fragment>
 `;

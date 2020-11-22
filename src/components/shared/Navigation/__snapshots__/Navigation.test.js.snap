@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders 1`] = `
+<div
+  className="navigation"
+>
+  <img
+    alt="Logo"
+    src="logo.png"
+  />
+</div>
+`;
