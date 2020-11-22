@@ -2,5 +2,9 @@
 @import "../styles/mixins";
 
 .navigation {
-  padding: 4 * $baseline;
+  padding: $baseline 2 * $baseline;
+
+  @include md {
+    padding: 2 * $baseline;
+  }
 }

@@ -1,0 +1,10 @@
+@import "../../../styles/baseline";
+@import "../../../styles/mixins";
+
+.image {
+  padding: $baseline 0;
+
+  @include md {
+    padding: 2 * $baseline 4 * $baseline;
+  }
+}

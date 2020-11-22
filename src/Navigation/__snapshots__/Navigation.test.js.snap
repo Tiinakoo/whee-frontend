@@ -4,14 +4,19 @@ exports[`Navigation renders 1`] = `
 <div
   className="navigation"
 >
-  <img
-    alt="Logo"
-    src="logo.png"
-  />
-  <BodyText
-    size="md"
+  <Flex
+    lineUpHorizontallyTo="md"
   >
-    The most definitive shape store in the world
-  </BodyText>
+    <Image
+      alt="Logo"
+      src="logo.png"
+    />
+    <BodyText
+      font="highlight"
+      size="md"
+    >
+      The most definitive shape store in the world
+    </BodyText>
+  </Flex>
 </div>
 `;
