@@ -8,5 +8,10 @@ exports[`Navigation renders 1`] = `
     alt="Logo"
     src="logo.png"
   />
+  <BodyText
+    size="md"
+  >
+    The most definitive shape store in the world
+  </BodyText>
 </div>
 `;
