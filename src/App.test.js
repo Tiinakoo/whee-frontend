@@ -1,7 +1,7 @@
 import App from "./App";
 import { shallow } from "enzyme";
 import React from "react";
-import "../setupUnitTests";
+import "./setupTests";
 
 describe("App", () => {
   let component;
