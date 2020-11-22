@@ -1,9 +1,19 @@
 @import "baseline";
 
-@mixin primaryFont() {
+@mixin font-heading() {
   font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
-@mixin secondaryFont() {
-  font-family: "Pacifico", cursive;
+@mixin font-highlight() {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-body() {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
