@@ -8,6 +8,10 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(background.jpg);
+  background-repeat: repeat-x;
+  background-size: auto;
 }
 
 #application {
