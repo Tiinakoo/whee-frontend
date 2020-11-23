@@ -20,7 +20,46 @@ exports[`Shapes renders 1`] = `
   <div
     key="some-shape-id"
   >
-    some-shape-name
+    <Flex
+      centeredVertically={true}
+      lineUpHorizontally={true}
+    >
+      <div
+        className="flex flex__centeredVertically flex__lineUpHorizontally"
+      >
+        <Icon
+          iconName="some-shape-name"
+        />
+        <Element
+          minWidth="md"
+        >
+          <div
+            className="element element__minWidthMd"
+          >
+            <Flex>
+              <div
+                className="flex"
+              >
+                <Heading>
+                  <p
+                    className="heading heading__sizeMd"
+                  >
+                    some-shape-name
+                  </p>
+                </Heading>
+                <BodyText>
+                  <p
+                    className="bodyText bodyText__fontBody bodyText__sizeSm"
+                  >
+                    some-shape-description
+                  </p>
+                </BodyText>
+              </div>
+            </Flex>
+          </div>
+        </Element>
+      </div>
+    </Flex>
   </div>
 </Shapes>
 `;
