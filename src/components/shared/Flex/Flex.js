@@ -9,6 +9,7 @@ const Flex = ({
   centeredVertically = centered,
   centeredHorizontally = centered,
   spaceBetween,
+  alignRight,
   lineUpHorizontally,
   lineUpHorizontallyTo,
   ...props
@@ -19,6 +20,7 @@ const Flex = ({
       [styles.flex__centeredVertically]: centeredVertically,
       [styles.flex__centeredHorizontally]: centeredHorizontally,
       [styles.flex__spaceBetween]: spaceBetween,
+      [styles.flex__alignRight]: alignRight,
       [styles.flex__lineUpHorizontallyToMdScreen]:
         lineUpHorizontallyTo === "md",
       [styles.flex__lineUpHorizontally]: lineUpHorizontally,
