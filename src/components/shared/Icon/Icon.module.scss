@@ -2,15 +2,21 @@
 @import "../../../styles/mixins";
 
 .icon {
-  padding: 2 * $baseline 4 * $baseline;
-  width: 15%;
+  padding-top: 2 * $baseline;
+  padding-bottom: 2 * $baseline;
+  padding-left: 0;
+  padding-right: 2 * $baseline;
+  width: 20%;
   height: auto;
 
   @include md {
-    padding: 2 * $baseline 4 * $baseline;
+    padding-top: 2 * $baseline;
+    padding-bottom: 2 * $baseline;
+    padding-left: 0;
+    padding-right: 6 * $baseline;
   }
 
   @include lg {
-    width: 10%;
+    width: 25%;
   }
 }

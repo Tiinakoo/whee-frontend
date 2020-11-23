@@ -22,3 +22,13 @@ $colors: (
   grey90: rgba(85, 85, 85, 0.8),
   grey100: rgba(65, 65, 65, 0.8),
 );
+
+@function color($label) {
+  $color: map-get($colors, $label);
+
+  @if $color {
+    @return $color;
+  }
+
+  @return null;
+}
