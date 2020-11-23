@@ -9,7 +9,7 @@ const shapesModel = new ShapesModel();
 
 shapesModel.getShapes();
 
-function App() {
+function App({ shapesModel }) {
   return (
     <>
       <Navigation />

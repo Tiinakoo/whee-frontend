@@ -1,13 +1,27 @@
 import App from "./App";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import React from "react";
 import "./setupTests";
 
 describe("App", () => {
   let component;
+  let shapesModelStub;
 
   beforeEach(() => {
-    component = shallow(<App />);
+    shapesModelStub = {
+      shapes: [
+        {
+          id: "some-shape-id",
+          name: "some-shape-name",
+          description: "some-shape-description",
+          price: 100,
+          currency: "€",
+          addToCart: expect.any(Function),
+        },
+      ],
+    };
+
+    component = mount(<App shapesModel={shapesModelStub} />);
   });
 
   it("renders", () => {

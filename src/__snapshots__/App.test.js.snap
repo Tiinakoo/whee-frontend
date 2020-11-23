@@ -1,42 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders 1`] = `
-<Fragment>
-  <Navigation />
+<App
+  shapesModel={
+    Object {
+      "shapes": Array [
+        Object {
+          "addToCart": Any<Function>,
+          "currency": "€",
+          "description": "some-shape-description",
+          "id": "some-shape-id",
+          "name": "some-shape-name",
+          "price": 100,
+        },
+      ],
+    }
+  }
+>
+  <Navigation>
+    <div
+      className="navigation"
+    >
+      <Flex
+        lineUpHorizontallyTo="md"
+      >
+        <div
+          className="flex flex__lineUpHorizontallyToMdScreen"
+        >
+          <Image
+            alt="Logo"
+            src="logo.png"
+          >
+            <div
+              className="image"
+            >
+              <img
+                alt="Logo"
+                src="logo.png"
+              />
+            </div>
+          </Image>
+          <BodyText
+            font="highlight"
+            size="md"
+          >
+            <p
+              className="bodyText bodyText__fontHighlight bodyText__sizeMd"
+            >
+              The most definitive shape store in the world
+            </p>
+          </BodyText>
+        </div>
+      </Flex>
+    </div>
+  </Navigation>
   <Page>
-    <Shapes
-      shapesModel={
-        ShapesModel {
-          "dependencies": Object {
-            "getShapes": [Function],
-          },
-          "rawShapes": Array [
-            Object {
-              "currency": "€",
-              "description": "Perfect choice when you don’t need any corners",
-              "id": "924738e2-2e69-44d2-876f-559b5f45ba19",
-              "name": "Circle",
-              "price": 999,
-            },
-            Object {
-              "currency": "€",
-              "description": "For once, it’s a great idea to think inside the box.",
-              "id": "3083d2af-2e1a-42c8-8ddb-bb9afaa51616",
-              "name": "Rectangle",
-              "price": 899,
-            },
-            Object {
-              "currency": "€",
-              "description": "A true classic with three elegant corners.",
-              "id": "b86cc2f0-aae1-48fa-92b9-6bb00c96153e",
-              "name": "Triangle",
-              "price": 1009,
-            },
-          ],
-          "shoppingCart": Array [],
+    <div
+      className="page"
+    >
+      <Shapes
+        shapesModel={
+          Object {
+            "shapes": Array [
+              Object {
+                "addToCart": Any<Function>,
+                "currency": "€",
+                "description": "some-shape-description",
+                "id": "some-shape-id",
+                "name": "some-shape-name",
+                "price": 100,
+              },
+            ],
+          }
         }
-      }
-    />
+      >
+        <div
+          key="some-shape-id"
+        >
+          some-shape-name
+        </div>
+      </Shapes>
+    </div>
   </Page>
-</Fragment>
+</App>
 `;
