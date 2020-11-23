@@ -8,6 +8,10 @@
   color: $secondaryColor;
   @include font-heading();
 
+  &__alignRight {
+    text-align: right;
+  }
+
   &__sizeSm {
     font-size: 12 * $typographyBaseline;
   }

@@ -6,6 +6,7 @@ import classNames from "classnames";
 const Heading = ({
   size = "md",
   centeredVertically,
+  alignRight,
   className,
   children,
   ...props
@@ -14,6 +15,7 @@ const Heading = ({
     styles.heading,
     styles[`heading__size${upperFirst(size)}`],
     {
+      [styles.heading__alignRight]: alignRight,
       [styles.heading__centeredVertically]: centeredVertically,
     },
     className,
