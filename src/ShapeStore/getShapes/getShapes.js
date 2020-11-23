@@ -27,7 +27,7 @@ export const dependencies = {
 };
 
 export default () => {
-  const response = dependencies.callApiForShapes();
+  const shapes = dependencies.callApiForShapes();
 
-  return { callWasSuccessful: true, response };
+  return { callWasSuccessful: true, response: shapes };
 };

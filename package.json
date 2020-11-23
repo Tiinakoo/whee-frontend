@@ -29,6 +29,7 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@async-fn/jest": "^1.2.1",
     "eslint-config-react-app": "^6.0.0",
     "enzyme-adapter-react-16": "^1.15.5"
   },
