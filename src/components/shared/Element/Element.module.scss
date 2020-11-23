@@ -5,14 +5,50 @@
   display: block;
 
   &__minWidthSm {
-    min-width: 32 * $baseline;
+    min-width: 8 * $baseline;
+
+    @include md {
+      min-width: 16 * $baseline;
+    }
   }
 
   &__minWidthMd {
-    min-width: 48 * $baseline;
+    min-width: 16 * $baseline;
+
+    @include md {
+      min-width: 32 * $baseline;
+    }
   }
 
   &__minWidthLg {
-    min-width: 64 * $baseline;
+    min-width: 32 * $baseline;
+
+    @include md {
+      min-width: 64 * $baseline;
+    }
+  }
+
+  &__paddingSm {
+    padding: 2 * $baseline 0;
+
+    @include md {
+      padding: 2 * $baseline;
+    }
+  }
+
+  &__paddingMd {
+    padding: 6 * $baseline 0;
+
+    @include md {
+      padding: 6 * $baseline;
+    }
+  }
+
+  &__paddingLg {
+    padding: 8 * $baseline 0;
+
+    @include md {
+      padding: 8 * $baseline;
+    }
   }
 }
