@@ -4,11 +4,39 @@ exports[`App renders 1`] = `
 <Fragment>
   <Navigation />
   <Page>
-    <div
-      className="App"
-    >
-      This will be Whee-store
-    </div>
+    <Shapes
+      shapesModel={
+        ShapesModel {
+          "dependencies": Object {
+            "getShapes": [Function],
+          },
+          "rawShapes": Array [
+            Object {
+              "currency": "€",
+              "description": "Perfect choice when you don’t need any corners",
+              "id": "924738e2-2e69-44d2-876f-559b5f45ba19",
+              "name": "Circle",
+              "price": 999,
+            },
+            Object {
+              "currency": "€",
+              "description": "For once, it’s a great idea to think inside the box.",
+              "id": "3083d2af-2e1a-42c8-8ddb-bb9afaa51616",
+              "name": "Rectangle",
+              "price": 899,
+            },
+            Object {
+              "currency": "€",
+              "description": "A true classic with three elegant corners.",
+              "id": "b86cc2f0-aae1-48fa-92b9-6bb00c96153e",
+              "name": "Triangle",
+              "price": 1009,
+            },
+          ],
+          "shoppingCart": Array [],
+        }
+      }
+    />
   </Page>
 </Fragment>
 `;

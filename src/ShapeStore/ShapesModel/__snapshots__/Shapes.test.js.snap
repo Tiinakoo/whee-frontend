@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shapes renders 1`] = `
+<Shapes
+  shapesModel={
+    Object {
+      "shapes": Array [
+        Object {
+          "addToCart": Any<Function>,
+          "currency": "€",
+          "description": "some-shape-description",
+          "id": "some-shape-id",
+          "name": "some-shape-name",
+          "price": 100,
+        },
+      ],
+    }
+  }
+>
+  <div
+    key="some-shape-id"
+  >
+    some-shape-name
+  </div>
+</Shapes>
+`;

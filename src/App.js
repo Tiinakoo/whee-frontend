@@ -2,6 +2,12 @@ import "./App.css";
 import React from "react";
 import Page from "./components/shared/Page/Page";
 import Navigation from "./Navigation/Navigation";
+import ShapesModel from "./ShapeStore/ShapesModel/ShapesModel";
+import Shapes from "./ShapeStore/ShapesModel/Shapes";
+
+const shapesModel = new ShapesModel();
+
+shapesModel.getShapes();
 
 function App() {
   return (
@@ -9,7 +15,7 @@ function App() {
       <Navigation />
 
       <Page>
-        <div className="App">This will be Whee-store</div>
+        <Shapes shapesModel={shapesModel} />
       </Page>
     </>
   );
