@@ -1,0 +1,41 @@
+@import "../../../styles/baseline";
+@import "../../../styles/colors";
+
+.button {
+  color: color(black);
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid $secondaryColor;
+  padding: $baseline 2 * $baseline;
+  margin: $baseline 0;
+
+  &__primary {
+    background-color: color(white);
+    color: $secondaryColor;
+
+    &:hover {
+      background-color: color(grey20);
+    }
+
+    &:active {
+      background-color: color(grey20);
+    }
+  }
+
+  &__attention {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__sizeSm {
+    font-size: 6 * $typographyBaseline;
+  }
+
+  &__sizeMd {
+    font-size: 4 * $typographyBaseline;
+  }
+
+  &__sizeLg {
+    font-size: 4 * $typographyBaseline;
+  }
+}
