@@ -4,5 +4,13 @@
 .page {
   max-width: 100%;
   margin: 0 auto;
-  padding: 6 * $baseline;
+  padding: 6 * $baseline 0;
+
+  @include md {
+    padding: 6 * $baseline 20 * $baseline;
+  }
+
+  @include lg {
+    padding: 6 * $baseline 40 * $baseline;
+  }
 }
