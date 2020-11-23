@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders 1`] = `
+<Heading>
+  <p
+    className="heading heading__sizeMd"
+  >
+    Some button
+  </p>
+</Heading>
+`;
