@@ -26,31 +26,31 @@ export default class ShapesModel {
     this.dependencies.getShapes = getShapes;
   }
 
-  rawShapes = [];
+  _rawShapes = [];
 
-  setRawShapes = (shapes) => {
-    this.rawShapes = shapes;
+  _setRawShapes = (shapes) => {
+    this._rawShapes = shapes;
   };
 
   getShapes = async () => {
     const { response: shapes } = await this.dependencies.getShapes();
 
-    this.setRawShapes(shapes);
+    this._setRawShapes(shapes);
   };
 
   get shapes() {
-    return this.rawShapes.map((shape) => ({
+    return this._rawShapes.map((shape) => ({
       ...shape,
 
       addToCart: () => {
-        this.setShoppingCart({ newItem: { id: shape.id, amount: 1 } });
+        this._setShoppingCart({ newItem: { id: shape.id, amount: 1 } });
       },
     }));
   }
 
   shoppingCart = [];
 
-  setShoppingCart = ({ newItem }) => {
+  _setShoppingCart = ({ newItem }) => {
     const alreadyHasItem = some(includes(newItem.id), this.shoppingCart);
 
     if (!alreadyHasItem) {

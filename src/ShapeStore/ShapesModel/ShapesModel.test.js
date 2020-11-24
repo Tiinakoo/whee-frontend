@@ -28,7 +28,7 @@ describe("ShapesModel", () => {
     });
 
     it("initially, has no shapes", () => {
-      expect(model.rawShapes).toEqual([]);
+      expect(model._rawShapes).toEqual([]);
     });
 
     it("initially, shopping cart is empty", () => {
