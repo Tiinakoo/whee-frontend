@@ -19,4 +19,10 @@
   @include lg {
     width: 25%;
   }
+
+  &__navigation {
+    width: 7 * $baseline;
+    height: auto;
+    padding: 0;
+  }
 }
