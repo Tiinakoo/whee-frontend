@@ -3,11 +3,12 @@ import React from "react";
 import Page from "./components/shared/Page/Page";
 import Navigation from "./Navigation/Navigation";
 import Shapes from "./ShapeStore/ShapesModel/Shapes";
+import { observer } from "mobx-react-lite";
 
 function App({ shapesModel }) {
   return (
     <>
-      <Navigation />
+      <Navigation shoppingCartStatus={shapesModel.shoppingCartStatus} />
 
       <Page>
         <Shapes shapesModel={shapesModel} />
@@ -16,4 +17,4 @@ function App({ shapesModel }) {
   );
 }
 
-export default App;
+export default observer(App);
