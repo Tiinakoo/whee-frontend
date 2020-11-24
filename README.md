@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Try it out
 
-Fork the project
-Run npm install
+Fork the project.\
+Run npm install.
 
 ## Available Scripts
 
