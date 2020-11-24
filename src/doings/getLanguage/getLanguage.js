@@ -1,1 +1,3 @@
-export default () => "en";
+const getLanguage = () => "en";
+
+export default getLanguage;

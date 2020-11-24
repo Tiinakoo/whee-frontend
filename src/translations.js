@@ -1,4 +1,4 @@
-export default {
+const translations = {
   en: {
     logo: "Logo",
     slogan: "The most definitive shape store in the world",
@@ -8,3 +8,5 @@ export default {
     severalItemsInCart: "items in cart",
   },
 };
+
+export default translations;
