@@ -1,6 +1,7 @@
 import Shapes from "./Shapes";
 import React from "react";
 import { mount } from "enzyme";
+import matches from "lodash/fp/matches";
 
 describe("Shapes", () => {
   let component;
@@ -15,7 +16,7 @@ describe("Shapes", () => {
           description: "some-shape-description",
           price: 100,
           currency: "€",
-          addToCart: expect.any(Function),
+          addToCart: () => {},
         },
       ],
     };
@@ -25,5 +26,17 @@ describe("Shapes", () => {
 
   it("renders", () => {
     expect(component).toMatchSnapshot();
+  });
+
+  it("knows how to submit", () => {
+    const shapeStub = shapesModelStub.shapes.find(
+      matches({ id: "some-shape-id" })
+    );
+
+    const button = component.find(
+      "PrimaryButton[data-add-to-cart-test='some-shape-id']"
+    );
+
+    expect(button).toHaveProp("onClick", shapeStub.addToCart);
   });
 });

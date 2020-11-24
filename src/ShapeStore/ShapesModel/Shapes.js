@@ -11,8 +11,8 @@ import getLanguage from "../../doings/getLanguage/getLanguage";
 
 const localTranslation = translations[getLanguage()];
 
-const Shapes = ({ shapesModel: { shapes } }) => {
-  return shapes.map(({ id, name, description, price, currency }) => (
+const Shapes = ({ shapesModel: { shapes } }) =>
+  shapes.map(({ id, name, description, price, currency, addToCart }) => (
     <Element padding="sm" key={id}>
       <Flex spaceBetween lineUpHorizontallyTo="md">
         <Element minWidth="sm">
@@ -35,12 +35,13 @@ const Shapes = ({ shapesModel: { shapes } }) => {
               {price} {currency}
             </Heading>
 
-            <PrimaryButton>{localTranslation.addToCart}</PrimaryButton>
+            <PrimaryButton onClick={addToCart} data-add-to-cart-test={id}>
+              {localTranslation.addToCart}
+            </PrimaryButton>
           </Flex>
         </Element>
       </Flex>
     </Element>
   ));
-};
 
 export default observer(Shapes);

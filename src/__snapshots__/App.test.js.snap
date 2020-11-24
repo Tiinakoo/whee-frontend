@@ -74,50 +74,126 @@ exports[`App renders 1`] = `
           }
         }
       >
-        <div
+        <Element
           key="some-shape-id"
+          padding="sm"
         >
-          <Flex
-            centeredVertically={true}
-            lineUpHorizontally={true}
+          <div
+            className="element element__minWidth element__paddingSm"
           >
-            <div
-              className="flex flex__centeredVertically flex__lineUpHorizontally"
+            <Flex
+              lineUpHorizontallyTo="md"
+              spaceBetween={true}
             >
-              <Icon
-                iconName="some-shape-name"
-              />
-              <Element
-                minWidth="md"
+              <div
+                className="flex flex__spaceBetween flex__lineUpHorizontallyToMdScreen"
               >
-                <div
-                  className="element element__minWidthMd"
+                <Element
+                  minWidth="sm"
                 >
-                  <Flex>
-                    <div
-                      className="flex"
+                  <div
+                    className="element element__minWidthSm element__padding"
+                  >
+                    <Flex
+                      centeredVertically={true}
+                      lineUpHorizontally={true}
                     >
-                      <Heading>
-                        <p
-                          className="heading heading__sizeMd"
+                      <div
+                        className="flex flex__centeredVertically flex__lineUpHorizontally"
+                      >
+                        <Icon
+                          iconName="some-shape-name"
+                        />
+                        <Element
+                          minWidth="md"
                         >
-                          some-shape-name
-                        </p>
-                      </Heading>
-                      <BodyText>
-                        <p
-                          className="bodyText bodyText__fontBody bodyText__sizeSm"
+                          <div
+                            className="element element__minWidthMd element__padding"
+                          >
+                            <Flex>
+                              <div
+                                className="flex"
+                              >
+                                <Heading>
+                                  <p
+                                    className="heading heading__sizeMd"
+                                  >
+                                    some-shape-name
+                                  </p>
+                                </Heading>
+                                <BodyText>
+                                  <p
+                                    className="bodyText bodyText__fontBody bodyText__sizeSm"
+                                  >
+                                    some-shape-description
+                                  </p>
+                                </BodyText>
+                              </div>
+                            </Flex>
+                          </div>
+                        </Element>
+                      </div>
+                    </Flex>
+                  </div>
+                </Element>
+                <Element
+                  minWidth="sm"
+                >
+                  <div
+                    className="element element__minWidthSm element__padding"
+                  >
+                    <Flex>
+                      <div
+                        className="flex"
+                      >
+                        <Heading
+                          alignRight={true}
                         >
-                          some-shape-description
-                        </p>
-                      </BodyText>
-                    </div>
-                  </Flex>
-                </div>
-              </Element>
-            </div>
-          </Flex>
-        </div>
+                          <p
+                            className="heading heading__sizeMd heading__alignRight"
+                          >
+                            100
+                             
+                            €
+                          </p>
+                        </Heading>
+                        <PrimaryButton
+                          data-add-to-cart-test="some-shape-id"
+                          onClick={Any<Function>}
+                        >
+                          <Button
+                            attention={true}
+                            data-add-to-cart-test="some-shape-id"
+                            onClick={Any<Function>}
+                            variant="primary"
+                          >
+                            <button
+                              className="button button__primary button__attention button__size"
+                              data-add-to-cart-test="some-shape-id"
+                              onClick={Any<Function>}
+                              type="button"
+                            >
+                              <BodyText
+                                font="body"
+                                size="md"
+                              >
+                                <p
+                                  className="bodyText bodyText__fontBody bodyText__sizeMd"
+                                >
+                                  Add to cart
+                                </p>
+                              </BodyText>
+                            </button>
+                          </Button>
+                        </PrimaryButton>
+                      </div>
+                    </Flex>
+                  </div>
+                </Element>
+              </div>
+            </Flex>
+          </div>
+        </Element>
       </Shapes>
     </div>
   </Page>
