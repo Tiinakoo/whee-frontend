@@ -2,6 +2,7 @@ import ShapesModel from "./ShapesModel";
 import getShapes from "../getShapes/getShapes";
 import { isObservable } from "mobx";
 import asyncFnForJest from "@async-fn/jest";
+import matches from "lodash/fp/matches";
 
 describe("ShapesModel", () => {
   it("has correct dependencies", () => {
@@ -32,6 +33,10 @@ describe("ShapesModel", () => {
 
     it("initially, shopping cart is empty", () => {
       expect(model.shoppingCart).toEqual([]);
+    });
+
+    it("initially, shopping cart status indicates that it is empty", () => {
+      expect(model.shoppingCartStatus).toBe("No items in cart");
     });
 
     describe("when getting shapes", () => {
@@ -88,7 +93,9 @@ describe("ShapesModel", () => {
 
         describe("when adding a shape to a shopping cart", () => {
           beforeEach(() => {
-            model.shapes[0].addToCart();
+            const shape = model.shapes.find(matches({ id: "some-shape-id" }));
+
+            shape.addToCart();
           });
 
           it("shopping cart knows item and amount", () => {
@@ -100,18 +107,24 @@ describe("ShapesModel", () => {
             ]);
           });
 
-          it("model knows total items in shopping cart", () => {
+          it("total items in shopping cart is known", () => {
             expect(model.totalItemsInShoppingCart).toBe(1);
+          });
+
+          it("shopping cart status indicates correct amount of items in cart", () => {
+            expect(model.shoppingCartStatus).toEqual("1 item in cart");
           });
         });
 
         describe("when adding a shape to a shopping cart that already has a similar item", () => {
           beforeEach(() => {
-            model.shapes[0].addToCart({
+            const shape = model.shapes.find(matches({ id: "some-shape-id" }));
+
+            shape.addToCart({
               id: "some-shape-id",
               amount: 1,
             });
-            model.shapes[0].addToCart({
+            shape.addToCart({
               id: "some-shape-id",
               amount: 1,
             });
@@ -126,18 +139,27 @@ describe("ShapesModel", () => {
             ]);
           });
 
-          it("model knows total items in shopping cart", () => {
+          it("total items in shopping cart is known", () => {
             expect(model.totalItemsInShoppingCart).toBe(2);
+          });
+
+          it("shopping cart status indicates correct amount of items in cart", () => {
+            expect(model.shoppingCartStatus).toEqual("2 items in cart");
           });
         });
 
         describe("when adding another shape to a shopping cart that already has a different item", () => {
           beforeEach(() => {
-            model.shapes[0].addToCart({
+            const shape = model.shapes.find(matches({ id: "some-shape-id" }));
+            const otherShape = model.shapes.find(
+              matches({ id: "some-other-shape-id" })
+            );
+
+            shape.addToCart({
               id: "some-shape-id",
               amount: 1,
             });
-            model.shapes[1].addToCart({
+            otherShape.addToCart({
               id: "some-other-shape-id",
               amount: 1,
             });
@@ -156,7 +178,7 @@ describe("ShapesModel", () => {
             ]);
           });
 
-          it("model knows total items in shopping cart", () => {
+          it("total items in shopping cart is known", () => {
             expect(model.totalItemsInShoppingCart).toBe(2);
           });
         });

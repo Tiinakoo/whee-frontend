@@ -1,12 +1,21 @@
 import getShapesImport from "../getShapes/getShapes";
 import { makeAutoObservable } from "mobx";
-import flow from "lodash/fp/flow";
-import map from "lodash/fp/map";
-import add from "lodash/fp/add";
-import some from "lodash/fp/some";
-import includes from "lodash/fp/includes";
-import sum from "lodash/fp/sum";
-import get from "lodash/fp/get";
+
+import {
+  isEqual,
+  isEmpty,
+  get,
+  sum,
+  includes,
+  flow,
+  map,
+  add,
+  some,
+} from "lodash/fp";
+import translations from "../../translations";
+import getLanguage from "../../doings/getLanguage/getLanguage";
+
+const localTranslation = translations[getLanguage()];
 
 export default class ShapesModel {
   dependencies = {};
@@ -18,6 +27,26 @@ export default class ShapesModel {
   }
 
   rawShapes = [];
+
+  setRawShapes = (shapes) => {
+    this.rawShapes = shapes;
+  };
+
+  getShapes = async () => {
+    const { response: shapes } = await this.dependencies.getShapes();
+
+    this.setRawShapes(shapes);
+  };
+
+  get shapes() {
+    return this.rawShapes.map((shape) => ({
+      ...shape,
+
+      addToCart: () => {
+        this.setShoppingCart({ newItem: { id: shape.id, amount: 1 } });
+      },
+    }));
+  }
 
   shoppingCart = [];
 
@@ -40,27 +69,18 @@ export default class ShapesModel {
     }
   };
 
-  setRawShapes = (shapes) => {
-    this.rawShapes = shapes;
-  };
-
-  getShapes = async () => {
-    const { response: shapes } = await this.dependencies.getShapes();
-
-    this.setRawShapes(shapes);
-  };
-
-  get shapes() {
-    return this.rawShapes.map((shape) => ({
-      ...shape,
-
-      addToCart: () => {
-        this.setShoppingCart({ newItem: { id: shape.id, amount: 1 } });
-      },
-    }));
-  }
-
   get totalItemsInShoppingCart() {
     return flow(map(get("amount")), sum)(this.shoppingCart);
   }
+
+  get shoppingCartStatus() {
+    return isEmpty(this.shoppingCart)
+      ? localTranslation.noItemsInCart
+      : getTranslationFor(this.totalItemsInShoppingCart);
+  }
 }
+
+const getTranslationFor = (totalItemsInShoppingCart) =>
+  isEqual(totalItemsInShoppingCart, 1)
+    ? localTranslation.oneItemInCart
+    : `${totalItemsInShoppingCart} ${localTranslation.severalItemsInCart}`;
