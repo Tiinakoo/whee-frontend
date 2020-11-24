@@ -13,35 +13,31 @@ const localTranslation = translations[getLanguage()];
 
 const Shapes = ({ shapesModel: { shapes } }) =>
   shapes.map(({ id, name, description, price, currency, addToCart }) => (
-    <Element padding="sm" key={id}>
+    <div key={id}>
       <Flex spaceBetween lineUpHorizontallyTo="md">
-        <Element minWidth="sm">
-          <Flex lineUpHorizontally centeredVertically>
+        <Flex lineUpHorizontally centeredVertically>
+          <Element padding="md" box="md">
             <Icon iconName={name} />
+          </Element>
 
-            <Element minWidth="md">
-              <Flex>
-                <Heading>{name}</Heading>
-
-                <BodyText>{description}</BodyText>
-              </Flex>
-            </Element>
-          </Flex>
-        </Element>
-
-        <Element minWidth="sm">
           <Flex>
-            <Heading alignRight>
-              {price} {currency}
-            </Heading>
+            <Heading>{name}</Heading>
 
-            <PrimaryButton onClick={addToCart} data-add-to-cart-test={id}>
-              {localTranslation.addToCart}
-            </PrimaryButton>
+            <BodyText>{description}</BodyText>
           </Flex>
-        </Element>
+        </Flex>
+
+        <Flex>
+          <Heading alignRight>
+            {price} {currency}
+          </Heading>
+
+          <PrimaryButton onClick={addToCart} data-add-to-cart-test={id}>
+            {localTranslation.addToCart}
+          </PrimaryButton>
+        </Flex>
       </Flex>
-    </Element>
+    </div>
   ));
 
 export default observer(Shapes);

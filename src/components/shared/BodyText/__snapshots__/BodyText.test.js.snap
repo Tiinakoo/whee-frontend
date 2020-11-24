@@ -3,7 +3,7 @@
 exports[`BodyText renders 1`] = `
 <BodyText>
   <p
-    className="bodyText bodyText__fontBody bodyText__sizeSm"
+    className="bodyText bodyText__fontBody bodyText__sizeMd"
   >
     Some button
   </p>

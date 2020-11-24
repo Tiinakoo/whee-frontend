@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation renders 1`] = `
-<div
+<Flex
   className="navigation"
+  lineUpHorizontally={true}
+  spaceBetween={true}
 >
   <Flex
     lineUpHorizontallyTo="md"
@@ -13,10 +15,28 @@ exports[`Navigation renders 1`] = `
     />
     <BodyText
       font="highlight"
-      size="md"
+      size="sm"
     >
       The most definitive shape store in the world
     </BodyText>
   </Flex>
-</div>
+  <Element
+    padding="sm"
+  >
+    <Flex
+      centeredVertically={true}
+      lineUpHorizontally={true}
+    >
+      <BodyText
+        alignRight={true}
+        font="highlight"
+        size="sm"
+      />
+      <Icon
+        iconName="shoppingCart"
+        navigation={true}
+      />
+    </Flex>
+  </Element>
+</Flex>
 `;

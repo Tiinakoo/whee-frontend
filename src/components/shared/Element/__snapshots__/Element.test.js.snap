@@ -3,7 +3,7 @@
 exports[`Element renders 1`] = `
 <Element>
   <div
-    className="element element__minWidth element__padding"
+    className="element element__minWidth element__padding element__box"
   />
 </Element>
 `;

@@ -17,25 +17,33 @@
 
   &__sizeSm {
     font-size: 4 * $typographyBaseline;
-  }
-
-  &__sizeMd {
-    font-size: 4 * $typographyBaseline;
 
     @include md {
       font-size: 5 * $typographyBaseline;
     }
   }
 
-  &__sizeLg {
-    font-size: 5 * $typographyBaseline;
+  &__sizeMd {
+    font-size: 4 * $typographyBaseline;
 
-    @include lg {
+    @include md {
       font-size: 6 * $typographyBaseline;
+    }
+  }
+
+  &__sizeLg {
+    font-size: 6 * $typographyBaseline;
+
+    @include md {
+      font-size: 7 * $typographyBaseline;
     }
   }
 
   &__centeredVertically {
     align-self: center;
+  }
+
+  &__alignRight {
+    text-align: right;
   }
 }

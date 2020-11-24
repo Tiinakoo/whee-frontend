@@ -2,27 +2,19 @@
 @import "../../../styles/mixins";
 
 .icon {
-  padding-top: 2 * $baseline;
-  padding-bottom: 2 * $baseline;
-  padding-left: 0;
-  padding-right: 2 * $baseline;
-  width: 20%;
+  padding: 2 * $baseline 2 * $baseline 2 * $baseline 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
   height: auto;
 
   @include md {
-    padding-top: 2 * $baseline;
-    padding-bottom: 2 * $baseline;
-    padding-left: 0;
-    padding-right: 6 * $baseline;
-  }
-
-  @include lg {
-    width: 25%;
+    padding: 0;
   }
 
   &__navigation {
     width: 7 * $baseline;
     height: auto;
-    padding: 0;
+    padding: 0 0 0 2 * $baseline;
   }
 }

@@ -16,9 +16,10 @@ describe("App", () => {
           description: "some-shape-description",
           price: 100,
           currency: "€",
-          addToCart: expect.any(Function),
+          addToCart: () => {},
         },
       ],
+      shoppingCartStatus: "some-status",
     };
 
     component = mount(<App shapesModel={shapesModelStub} />);

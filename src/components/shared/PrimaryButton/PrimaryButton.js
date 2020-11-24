@@ -5,7 +5,7 @@ import { observer } from "mobx-react-lite";
 
 const PrimaryButton = ({ onClick, size, children, ...props }) => (
   <Button onClick={onClick} variant="primary" size={size} attention {...props}>
-    <BodyText font="body" size="md">
+    <BodyText font="body" size="sm">
       {children}
     </BodyText>
   </Button>

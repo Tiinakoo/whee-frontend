@@ -32,23 +32,65 @@
     padding: 2 * $baseline 0;
 
     @include md {
-      padding: 2 * $baseline;
+      padding: 2 * $baseline $baseline;
+    }
+
+    @include lg {
+      padding: 4 * $baseline;
     }
   }
 
   &__paddingMd {
-    padding: 6 * $baseline 0;
+    padding: 4 * $baseline 0;
 
     @include md {
-      padding: 6 * $baseline;
+      padding: 4 * $baseline 2 * $baseline;
+    }
+
+    @include lg {
+      padding: 4 * $baseline;
     }
   }
 
   &__paddingLg {
-    padding: 8 * $baseline 0;
+    padding: 6 * $baseline 0;
 
     @include md {
-      padding: 8 * $baseline;
+      padding: 6 * $baseline 3 * $baseline;
+    }
+
+    @include lg {
+      padding: 6 * $baseline;
+    }
+  }
+
+  &__boxSm {
+    width: 8 * $baseline;
+    height: 8 * $baseline;
+
+    @include md {
+      width: 12 * $baseline;
+      height: 12 * $baseline;
+    }
+  }
+
+  &__boxMd {
+    width: 15 * $baseline;
+    height: 15 * $baseline;
+
+    @include md {
+      width: 18 * $baseline;
+      height: 18 * $baseline;
+    }
+  }
+
+  &__boxLg {
+    width: 20 * $baseline;
+    height: 20 * $baseline;
+
+    @include md {
+      width: 22 * $baseline;
+      height: 22 * $baseline;
     }
   }
 }

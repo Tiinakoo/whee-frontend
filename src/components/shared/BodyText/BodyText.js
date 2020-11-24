@@ -4,9 +4,10 @@ import styles from "./BodyText.module.scss";
 import classNames from "classnames";
 
 const BodyText = ({
-  size = "sm",
+  size = "md",
   font = "body",
   centeredVertically,
+  alignRight,
   className,
   children,
   ...props
@@ -17,6 +18,7 @@ const BodyText = ({
     styles[`bodyText__size${upperFirst(size)}`],
     {
       [styles.bodyText__centeredVertically]: centeredVertically,
+      [styles.bodyText__alignRight]: alignRight,
     },
     className,
   ]);

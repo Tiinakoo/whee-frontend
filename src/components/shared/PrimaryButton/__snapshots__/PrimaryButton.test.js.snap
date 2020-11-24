@@ -12,10 +12,10 @@ exports[`PrimaryButton renders 1`] = `
     >
       <BodyText
         font="body"
-        size="md"
+        size="sm"
       >
         <p
-          className="bodyText bodyText__fontBody bodyText__sizeMd"
+          className="bodyText bodyText__fontBody bodyText__sizeSm"
         >
           Some button
         </p>
